@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "test:report": "npx playwright test && allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report",
-    "report:generate": "allure generate ./allure-results --clean -o ./allure-report",
+    "test:report": "npx playwright test && cp -R ./allure-report/history ./allure-results/ || true && allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report",
+    "report:generate": "cp -R ./allure-report/history ./allure-results/ || true && allure generate ./allure-results --clean -o ./allure-report",
     "report:open": "allure open ./allure-report",
     "report:clean": "rm -rf ./allure-results ./allure-report"
   },
