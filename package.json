@@ -1,0 +1,40 @@
+{
+  "name": "playwright-api-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:report": "npx playwright test && allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report",
+    "report:generate": "allure generate ./allure-results --clean -o ./allure-report",
+    "report:open": "allure open ./allure-report",
+    "report:clean": "rm -rf ./allure-results ./allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "ajv": "^8.17.1",
+    "allure-playwright": "^3.3.3",
+    "dotenv": "^17.2.1",
+    "playwright": "^1.55.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "ajv-formats": "^3.0.1",
+    "allure-js-commons": "^3.3.3",
+    "charenc": "^0.0.2",
+    "crypt": "^0.0.2",
+    "fast-deep-equal": "^3.1.3",
+    "fast-uri": "^3.1.0",
+    "is-buffer": "^1.1.6",
+    "json-schema-traverse": "^1.0.0",
+    "md5": "^2.3.0",
+    "playwright-core": "^1.55.0",
+    "require-from-string": "^2.0.2",
+    "undici-types": "^7.10.0"
+  }
+}
