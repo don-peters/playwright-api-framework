@@ -6,7 +6,13 @@ import { getUserList, getUserById } from '../utils/getUserHelpers';
 const token = process.env.GOREST_TOKEN || '';
 
 test.describe('GET /users/:id', () => {
-  test('should return a valid user', async ({ request }) => {
+  test('should return a valid user', {
+    annotation: [
+      { type: 'feature', description: 'Get User By ID' },
+      { type: 'epic', description: 'User API' },
+      { type: 'tag', description: 'Get User' }
+    ]
+  }, async ({ request }) => {
     // Arrange
     const listResponse = await getUserList(request, token);
     const users = await listResponse.json();
@@ -28,7 +34,13 @@ test.describe('GET /users/:id', () => {
     expect(found).toBe(true);
   });
   test.describe('GET /users', () => {
-    test('should return a list of users', async ({ request }) => {
+    test('should return a list of users', {
+      annotation: [
+        { type: 'feature', description: 'Get User List' },
+        { type: 'epic', description: 'User API' },
+        { type: 'tag', description: 'Get User' }
+      ]
+    }, async ({ request }) => {
       // Act
       const response = await getUserList(request, token);
       const body = await response.json();

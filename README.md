@@ -99,6 +99,19 @@ for (const user of users) {
 - **Schema validation:** Ajv with formats for strict response checks
 - **Helpers:** All API actions abstracted for clean specs
 - **Allure reporting:** History/trends, stack traces, clear pass/fail
+  - Grouping/filtering is done using supported labels: `feature`, `epic`, `story`, `tag`, and `severity` (not `category`).
+  - Example annotation usage:
+    ```typescript
+    test('should return a valid user', {
+      annotation: [
+        { type: 'feature', description: 'Get User By ID' },
+        { type: 'epic', description: 'User API' },
+        { type: 'tag', description: 'Get User' }
+      ]
+    }, async ({ request }) => {
+      // ...test code...
+    });
+    ```
 
 ---
 
