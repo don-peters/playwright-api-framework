@@ -1,0 +1,23 @@
+{
+  "categories": [
+    {
+      "name": "Response Validation",
+      "messageRegex": ".*(status.*to be|Schema validation|property|field).*",
+      "matchedStatuses": ["failed"]
+    },
+    {
+      "name": "Data Issues",
+      "messageRegex": ".*(should have|should be|expected|to match).*",
+      "matchedStatuses": ["failed"]
+    },
+    {
+      "name": "Infrastructure",
+      "messageRegex": ".*(token|Setup failed|Cleanup failed|ECONNREFUSED|timeout).*",
+      "matchedStatuses": ["broken"]
+    },
+    {
+      "name": "Passed",
+      "matchedStatuses": ["passed"]
+    }
+  ]
+}

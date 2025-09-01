@@ -4,7 +4,12 @@ dotenv.config();
 
 export default defineConfig({
   testDir: './src/tests',
-  reporter: [['allure-playwright']],
+  reporter: [['allure-playwright', {
+    detail: true,
+    outputFolder: 'allure-results',
+    suiteTitle: false,
+    categories: ['allure-categories.json']
+  }]],
   use: {
     baseURL: 'https://gorest.co.in/public/v2',
     extraHTTPHeaders: {
