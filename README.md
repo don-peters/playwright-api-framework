@@ -19,6 +19,31 @@ A clean, maintainable, and beginner-friendly API testing framework using Playwri
 
 ---
 
+## 🏗️ Architecture & Design Patterns
+
+This framework follows several proven design patterns:
+
+- **Page Object Pattern** (API version): API helpers encapsulate endpoint interactions
+- **Factory Pattern**: Test data generation with faker.js
+- **AAA Pattern**: Arrange-Act-Assert structure in all tests
+- **Builder Pattern**: Flexible test data creation
+- **Singleton Pattern**: Configuration management
+- **Strategy Pattern**: Different validation approaches for different endpoints
+
+### Project Structure
+```
+src/
+├── api/           # API client abstractions
+├── config/        # Configuration management
+├── constants/     # Application constants
+├── schemas/       # JSON schemas for validation
+├── tests/         # Test specifications
+├── types/         # TypeScript interfaces
+└── utils/         # Helper functions and factories
+```
+
+---
+
 ## 🚀 Getting Started
 
 1. **Clone the repository**

@@ -8,12 +8,17 @@
     "test:report": "npx playwright test && cp -R ./allure-report/history ./allure-results/ || true && allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report",
     "report:generate": "cp -R ./allure-report/history ./allure-results/ || true && allure generate ./allure-results --clean -o ./allure-report",
     "report:open": "allure open ./allure-report",
-    "report:clean": "rm -rf ./allure-results ./allure-report"
+    "report:clean": "rm -rf ./allure-results ./allure-report",
+    "audit:security": "npm audit",
+    "audit:fix": "npm audit fix",
+    "deps:check": "npm outdated",
+    "deps:update": "npm update"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^10.0.0",
     "@playwright/test": "^1.55.0",
     "@types/node": "^24.3.0",
     "ajv": "^8.17.1",
